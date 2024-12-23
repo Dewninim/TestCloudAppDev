@@ -1,59 +1,165 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}    
-
-
-
-
-/* Card styling */
-.card {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-  width: 100%; /* Full width */
-  height: 100%;
-  max-width: 800px; /* Optional: Limit width for better appearance */
-  margin: 0 auto;
-  box-sizing: border-box;
-  
-  
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.PurpleNavBar {
-  position: fixed;
-  bottom: 0;
+.app-container.light {
+  background-color: #f9f9f9;
+  color: #2d2d2d;
+}
+
+.app-container.dark {
+  background-color: #1e1e2a;
+  color: #ffffff;
+}
+
+.container {
   width: 100%;
   max-width: 400px;
-  left: 50%;
-  transform: translateX(-50%) ;
-  background: #9b59b6;
-  display: flex;
-  justify-content:space-around;
-  padding: 10px 0;
-  border-top-left-radius: 9px;
-  border-top-right-radius: 9px;
-  border-bottom-right-radius: 9px;
-  border-bottom-left-radius: 9px;
-  transition: background-color 0.3s;
+  margin: auto;
+  padding: 20px;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
-  }
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: #6f52ed;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
 
-  .container {
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-  }
+.header-info {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.menu {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.mode-toggle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mode-toggle button {
+  background: #6f52ed;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.progress-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.progress-card {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.progress-card.purple {
+  background: #6f52ed;
+}
+
+.progress-card.orange {
+  background: #f39c12;
+}
+
+.progress-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.quick-access {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.quick-access button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  background: #eaeaea;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.quick-access button.active {
+  background: #6f52ed;
+  color: white;
+}
+
+.tasks, .events {
+  margin-bottom: 20px;
+}
+
+.task-item, .event-item {
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-container.dark .task-item,
+.app-container.dark .event-item {
+  background: #2b2b3f;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  background: #6f52ed;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 400px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transform: translateX(-50%);
+  margin-bottom: 30px;
+  transition: background-color 0.3s;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
